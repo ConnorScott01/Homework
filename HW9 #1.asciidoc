@@ -1,0 +1,83 @@
++*In[1]:*+
+[source, ipython3]
+----
+# 1)
+from random import random
+
+A = random()
+B = random()
+C = random()
+prize1 = "W"
+prize2 = "X"
+prize3 = "Y"
+
+if A <= 0.333:
+    prize1 = True
+if B > 0.333 and B <= 0.667:
+    prize2 = True
+if C > 0.667 and C < 1:
+    prize3 = True
+
+rmv = random()
+
+if rmv > 0.333:
+    prize1 = False
+if rmv <= 0.333 or rmv > 0.667:
+    prize2 = False
+if rmv <= 0.667 or rmv > 1:
+    prize3 = False    
+
+
+if prize1 == False:
+    print("The prize is not behind door 1")
+if prize2 == False:
+    print("The prize is not behind door 2")
+if prize3 == False:
+    print("The prize is not behind door 3")
+    
+int(input("Guess the door: "))
+
+#prize1 = True
+if input == 1 and prize1 == True:
+    print("Congratulations, you win!")
+if input == 2 and prize1 == True:
+    print("Sorry, you lose.")
+if input == 3 and prize1 == True:
+    print("Sorry, you lose.")
+#prize2 = True
+if input == 1 and prize2 == True:
+    print("Sorry, you lose.")
+if input == 2 and prize2 == True:
+    print("Congratulations, you win!")
+if input == 3 and prize2 == True:
+    print("Sorry, you lose.")
+#prize3 = True
+if input == 1 and prize3 == True:
+    print("Sorry, you lose.")
+if input == 2 and prize3 == True:
+    print("Sorry, you lose.")
+if input == 3 and prize3 == True:
+    print("Congratulations, you win!")
+----
+
+
++*Out[1]:*+
+----
+The prize is not behind door 1
+The prize is not behind door 3
+Guess the door: 2
+----
+
+
++*In[ ]:*+
+[source, ipython3]
+----
+
+----
+
+
++*In[ ]:*+
+[source, ipython3]
+----
+
+----
